@@ -1,0 +1,41 @@
+{
+  "name": "Meta",
+  "version": "1.0.0",
+  "description": "Meta AI Desktop is not an official Meta application; it is a personal project by Corex Institut. , it loads the actual website (meta.ai)",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "keywords": [],
+  "author": "By Corex insitut",
+  "license": "MIT",
+  "type": "commonjs",
+  "build": {
+    "appId": "com.meta.ai",
+    "productName": "Meta",
+    "asar": true,
+    "compression": "maximum",
+    "files": [
+      "main.js",
+      "index.js",
+      "block",
+      "blocker.js",
+      "ressources/**/*",
+      "package.json",
+      "!local/**/*",
+      "!local"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "ressources/meta.ico"
+    },
+    "nsis": {
+      "installerIcon": "ressources/meta.ico",
+      "uninstallerIcon": "ressources/meta.ico",
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "deleteAppDataOnUninstall": true
+    }
+  }
+}
